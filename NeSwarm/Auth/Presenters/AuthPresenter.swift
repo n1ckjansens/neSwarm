@@ -8,9 +8,14 @@
 import Foundation
 
 class AuthPresenter: AuthPresenterProtocol {
+    
+    // MARK: - Private Properties
+    
     weak var view: AuthViewProtocol?
     private let router: AuthRouterProtocol
     private let interactor: AuthInteractorProtocol
+    
+    // MARK: - Initializers
     
     init(
         interactor: AuthInteractorProtocol,
@@ -19,6 +24,8 @@ class AuthPresenter: AuthPresenterProtocol {
         self.interactor = interactor
         self.router = router
     }
+    
+    // MARK: - Public Methods
     
     func viewDidLoad() {
 

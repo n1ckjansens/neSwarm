@@ -17,9 +17,10 @@ final class SwitchButtonCell: UITableViewCell, TableCell {
         return sButton
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: SwitchButtonConsts.cellID)
-        
         self.setLayout()
     }
     
@@ -30,6 +31,8 @@ final class SwitchButtonCell: UITableViewCell, TableCell {
     override func prepareForReuse() {
         super.prepareForReuse()
     }
+    
+    // MARK: - Public Methods
     
     func setLayout() {
         contentView.addSubview(switchButton)
@@ -44,7 +47,6 @@ final class SwitchButtonCell: UITableViewCell, TableCell {
             maker.centerY.equalToSuperview()
             maker.width.equalTo(SwitchButtonConsts.switchButtonWidth)
         }
-        
     }
 }
 

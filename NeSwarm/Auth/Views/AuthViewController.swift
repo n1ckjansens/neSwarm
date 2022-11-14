@@ -10,14 +10,20 @@ import SnapKit
 
 final class AuthView: UIViewController {
     
+    // MARK: - Private Properties
+    
     private let presenter: AuthPresenterProtocol
     
     private var dataSourse: [CellType] = [.labelAuth, .login, .password, .email, .submitButton, .switchButton]
     
-    static let cellIDs: [String] = [CellIDs.labelId, CellIDs.textFieldId, CellIDs.textFieldId, CellIDs.textFieldId, CellIDs.submitButtonId, CellIDs.switchButtonId]
+    // MARK: - Public Properties
     
     lazy var tableView = UITableView()
 
+    static let cellIDs: [String] = [CellIDs.labelId, CellIDs.textFieldId, CellIDs.textFieldId, CellIDs.textFieldId, CellIDs.submitButtonId, CellIDs.switchButtonId]
+    
+    // MARK: - Initializers
+    
     init(presenter: AuthPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -27,6 +33,8 @@ final class AuthView: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

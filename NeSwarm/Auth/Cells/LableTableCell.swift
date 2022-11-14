@@ -13,13 +13,14 @@ class LabelCell: UITableViewCell, TableCell {
     
     lazy var labelCell: UILabel = {
         let label = UILabel()
-        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.textAlignment = .center
         label.font = label.font.withSize(LabelConsts.labelFontSize)
         return label
     }()
+    
+    // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CellIDs.labelId)
@@ -34,6 +35,8 @@ class LabelCell: UITableViewCell, TableCell {
         super.prepareForReuse()
     }
     
+    // MARK: - Public Methods
+    
     func setLayout() {
         addSubview(labelCell)
         selectionStyle = .none
@@ -42,7 +45,6 @@ class LabelCell: UITableViewCell, TableCell {
             maker.centerX.equalToSuperview()
             maker.centerYWithinMargins.equalToSuperview()
         }
-        
     }
 }
 
@@ -55,19 +57,6 @@ extension LabelCell: TableCellProtocol {
         case .labelRegister:
             labelCell.text = type.name
         default: break;
-        }
-    }
-}
-
-enum LabelType {
-    case auth
-    case register
-    var name: String {
-        switch self {
-        case .auth:
-            return "Вход"
-        case .register:
-            return "Регистрация"
         }
     }
 }

@@ -17,9 +17,10 @@ final class SubmitButtonCell: UITableViewCell, TableCell {
         return subButton
     }()
     
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CellIDs.submitButtonId)
-        
         self.setLayout()
     }
     
@@ -31,15 +32,16 @@ final class SubmitButtonCell: UITableViewCell, TableCell {
         super.prepareForReuse()
     }
     
+    // MARK: - Public Methods
+    
     func setLayout() {
         contentView.addSubview(submitButton)
         selectionStyle = .none
-        
+    
         submitButton.snp.makeConstraints{ (maker) in
              maker.centerX.equalToSuperview()
              maker.centerY.equalToSuperview()
          }
-        
     }
 }
 

@@ -11,7 +11,6 @@ import SnapKit
 
 class TextFieldCell: UITableViewCell, TableCell {
 
-    
     lazy var textField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +19,8 @@ class TextFieldCell: UITableViewCell, TableCell {
         return field
     }()
 
+    // MARK: - Initializers
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CellIDs.textFieldId)
         
@@ -34,6 +35,8 @@ class TextFieldCell: UITableViewCell, TableCell {
         super.prepareForReuse()
     }
     
+    // MARK: - Public Methods
+    
     func setLayout() {
         contentView.addSubview(textField)
         selectionStyle = .none
@@ -43,7 +46,6 @@ class TextFieldCell: UITableViewCell, TableCell {
             maker.centerY.equalToSuperview()
             maker.width.equalToSuperview()
         }
-        
     }
 }
 
@@ -72,22 +74,6 @@ extension TextFieldCell: TableCellProtocol {
             textField.leftView = leftImage
             textField.leftViewMode = .always
         default: break;
-        }
-    }
-}
-
-enum TextFieldType {
-    case email
-    case login
-    case password
-    var name: String {
-        switch self {
-        case .email:
-            return "Email"
-        case .login:
-            return "Имя пользователя"
-        case .password:
-            return "Пароль"
         }
     }
 }

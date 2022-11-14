@@ -9,11 +9,17 @@ import UIKit
 
 class RootPresenter {
     
+    // MARK: - Private Properties
+    
     private let router:RootRouterProtocol
+    
+    // MARK: - Initializers
     
     init(router: RootRouterProtocol) {
         self.router = router
     }
+    
+    // MARK: - Public Methods
     
     func start() {
         router.presentScreen()
