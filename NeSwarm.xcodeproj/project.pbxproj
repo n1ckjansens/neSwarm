@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84667B062928040000BB8813 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B022928040000BB8813 /* email.png */; };
+		84667B072928040000BB8813 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B032928040000BB8813 /* password.png */; };
+		84667B082928040000BB8813 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B042928040000BB8813 /* submit.png */; };
+		84667B092928040000BB8813 /* username.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B052928040000BB8813 /* username.png */; };
 		84FBF6B42922871500EDA8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF6B32922871500EDA8D1 /* AppDelegate.swift */; };
 		84FBF6B62922871500EDA8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF6B52922871500EDA8D1 /* SceneDelegate.swift */; };
 		84FBF6BD2922871600EDA8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBF6BC2922871600EDA8D1 /* Assets.xcassets */; };
@@ -34,16 +38,16 @@
 /* Begin PBXFileReference section */
 		287DFDAEDF92A5E45472A204 /* Pods_NeSwarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeSwarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A21225BE3A779C7732A15E9 /* Pods-NeSwarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeSwarm.debug.xcconfig"; path = "Target Support Files/Pods-NeSwarm/Pods-NeSwarm.debug.xcconfig"; sourceTree = "<group>"; };
+		84667B022928040000BB8813 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		84667B032928040000BB8813 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		84667B042928040000BB8813 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
+		84667B052928040000BB8813 /* username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username.png; sourceTree = "<group>"; };
 		84FBF6B02922871500EDA8D1 /* NeSwarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeSwarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBF6B32922871500EDA8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBF6B52922871500EDA8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84FBF6BC2922871600EDA8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84FBF6BF2922871600EDA8D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84FBF6C12922871600EDA8D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84FBF6DC292288C900EDA8D1 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = password.png; path = ../../../password.png; sourceTree = "<group>"; };
-		84FBF6DD292288C900EDA8D1 /* username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = username.png; path = ../../../username.png; sourceTree = "<group>"; };
-		84FBF6DE292288C900EDA8D1 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = ../../../email.png; sourceTree = "<group>"; };
-		84FBF6DF292288C900EDA8D1 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = submit.png; path = ../../../submit.png; sourceTree = "<group>"; };
 		84FBF6E029228DDF00EDA8D1 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		84FBF6E229228DF600EDA8D1 /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
 		84FBF6E429228E0D00EDA8D1 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
@@ -121,10 +125,10 @@
 		84FBF6C7292287F900EDA8D1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				84FBF6DE292288C900EDA8D1 /* email.png */,
-				84FBF6DC292288C900EDA8D1 /* password.png */,
-				84FBF6DF292288C900EDA8D1 /* submit.png */,
-				84FBF6DD292288C900EDA8D1 /* username.png */,
+				84667B022928040000BB8813 /* email.png */,
+				84667B032928040000BB8813 /* password.png */,
+				84667B042928040000BB8813 /* submit.png */,
+				84667B052928040000BB8813 /* username.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -302,7 +306,7 @@
 				};
 			};
 			buildConfigurationList = 84FBF6AB2922871500EDA8D1 /* Build configuration list for PBXProject "NeSwarm" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -326,6 +330,10 @@
 			files = (
 				84FBF6C02922871600EDA8D1 /* LaunchScreen.storyboard in Resources */,
 				84FBF6BD2922871600EDA8D1 /* Assets.xcassets in Resources */,
+				84667B072928040000BB8813 /* password.png in Resources */,
+				84667B092928040000BB8813 /* username.png in Resources */,
+				84667B082928040000BB8813 /* submit.png in Resources */,
+				84667B062928040000BB8813 /* email.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
