@@ -11,6 +11,8 @@ import SnapKit
 
 final class SubmitButtonCell: UITableViewCell, TableCell {
     
+    // MARK: - Public Properties
+    
     lazy var submitButton: UIButton = {
         let subButton = UIButton()
         subButton.translatesAutoresizingMaskIntoConstraints = false

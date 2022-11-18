@@ -39,7 +39,7 @@ final class AuthView: UIViewController {
         super.viewDidLoad()
         setupUI()
         presenter.viewDidLoad()
-        
+        self.hideKeyboardOnTap()
     }
     
     func setupUI() {
@@ -58,7 +58,6 @@ final class AuthView: UIViewController {
             maker.edges.equalToSuperview()
         }
     }
-    
 }
 
 extension AuthView: AuthViewProtocol {
@@ -68,10 +67,7 @@ extension AuthView: AuthViewProtocol {
 extension AuthView: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: AuthView.cellIDs[indexPath.row], for: indexPath) as! TableCell
-        cell.configure(type: dataSourse[indexPath.row])
-        return cell
+        return CellFactory.cellFactoryValue.makeCell(type: dataSourse[indexPath.row])
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

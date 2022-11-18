@@ -11,6 +11,8 @@ import SnapKit
 
 class TextFieldCell: UITableViewCell, TableCell {
 
+    // MARK: - Public Properties
+    
     lazy var textField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -40,7 +42,6 @@ class TextFieldCell: UITableViewCell, TableCell {
     func setLayout() {
         contentView.addSubview(textField)
         selectionStyle = .none
-        
         textField.snp.makeConstraints { (maker) in
             maker.left.equalToSuperview()
             maker.centerY.equalToSuperview()
@@ -56,23 +57,32 @@ extension TextFieldCell: TableCellProtocol {
         switch type {
         case .login:
             textField.textContentType = .username
-            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.userImage.size.width, height: TextFieldConsts.userImage.size.height))
+            let outerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.userImageWidth+TextFieldConsts.imagePadding, height: TextFieldConsts.userImageHeight))
+            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.userImageWidth, height: TextFieldConsts.userImageHeight))
             leftImage.image = TextFieldConsts.userImage
-            textField.leftView = leftImage
+            outerView.addSubview(leftImage)
+            textField.leftView = outerView
             textField.leftViewMode = .always
+            
         case .email:
             textField.textContentType = .emailAddress
-            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.emailImage.size.width, height: TextFieldConsts.emailImage.size.height))
+            let outerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.emailImageWidth+TextFieldConsts.imagePadding, height: TextFieldConsts.emailImageHeight))
+            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.emailImageWidth, height: TextFieldConsts.emailImageHeight))
             leftImage.image = TextFieldConsts.emailImage
-            textField.leftView = leftImage
+            outerView.addSubview(leftImage)
+            textField.leftView = outerView
             textField.leftViewMode = .always
+            
         case .password:
             textField.textContentType = .password
             textField.isSecureTextEntry = true
-            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.passwordImage.size.width, height: TextFieldConsts.passwordImage.size.height))
+            let outerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.passwordImageWidth+TextFieldConsts.imagePadding, height: TextFieldConsts.passwordImageHeight))
+            let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: TextFieldConsts.passwordImageWidth, height: TextFieldConsts.passwordImageHeight))
             leftImage.image = TextFieldConsts.passwordImage
-            textField.leftView = leftImage
+            outerView.addSubview(leftImage)
+            textField.leftView = outerView
             textField.leftViewMode = .always
+            
         default: break;
         }
     }
@@ -83,4 +93,13 @@ enum TextFieldConsts {
     static let userImage: UIImage = UIImage(named: "username.png") ?? UIImage()
     static let passwordImage: UIImage = UIImage(named: "password.png") ?? UIImage()
     static let emailImage: UIImage = UIImage(named: "email.png") ?? UIImage()
+    
+    static let userImageWidth: CGFloat = userImage.size.width
+    static let userImageHeight: CGFloat = userImage.size.height
+    static let passwordImageWidth: CGFloat = passwordImage.size.width
+    static let passwordImageHeight: CGFloat = passwordImage.size.height
+    static let emailImageWidth: CGFloat = emailImage.size.width
+    static let emailImageHeight: CGFloat = emailImage.size.height
+    
+    static let imagePadding = 15.0
 }

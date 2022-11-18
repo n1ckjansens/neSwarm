@@ -11,6 +11,8 @@ import SnapKit
 
 final class SwitchButtonCell: UITableViewCell, TableCell {
     
+    // MARK: - Public Properties
+    
     lazy var switchButton: UIButton = {
         let sButton = UIButton()
         sButton.translatesAutoresizingMaskIntoConstraints = false

@@ -42,7 +42,6 @@ enum CellType {
                 return CellTypeConsts.labelRegister
         }
     }
-    
 }
 
 enum CellTypeConsts {

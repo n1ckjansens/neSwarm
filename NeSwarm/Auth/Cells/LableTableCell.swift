@@ -11,6 +11,8 @@ import SnapKit
 
 class LabelCell: UITableViewCell, TableCell {
     
+    // MARK: - Public Properties
+    
     lazy var labelCell: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

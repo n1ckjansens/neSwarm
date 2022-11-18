@@ -11,6 +11,9 @@
 		84667B072928040000BB8813 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B032928040000BB8813 /* password.png */; };
 		84667B082928040000BB8813 /* submit.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B042928040000BB8813 /* submit.png */; };
 		84667B092928040000BB8813 /* username.png in Resources */ = {isa = PBXBuildFile; fileRef = 84667B052928040000BB8813 /* username.png */; };
+		84667B0B2928200B00BB8813 /* CellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84667B0A2928200B00BB8813 /* CellFactory.swift */; };
+		84667B0E292849E300BB8813 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84667B0D292849E300BB8813 /* String + Extension.swift */; };
+		84667B1029284B9C00BB8813 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84667B0F29284B9C00BB8813 /* UIViewController + Extension.swift */; };
 		84FBF6B42922871500EDA8D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF6B32922871500EDA8D1 /* AppDelegate.swift */; };
 		84FBF6B62922871500EDA8D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF6B52922871500EDA8D1 /* SceneDelegate.swift */; };
 		84FBF6BD2922871600EDA8D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBF6BC2922871600EDA8D1 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		84667B032928040000BB8813 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		84667B042928040000BB8813 /* submit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit.png; sourceTree = "<group>"; };
 		84667B052928040000BB8813 /* username.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = username.png; sourceTree = "<group>"; };
+		84667B0A2928200B00BB8813 /* CellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFactory.swift; sourceTree = "<group>"; };
+		84667B0D292849E300BB8813 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		84667B0F29284B9C00BB8813 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		84FBF6B02922871500EDA8D1 /* NeSwarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeSwarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBF6B32922871500EDA8D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBF6B52922871500EDA8D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84667B0C292849C000BB8813 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84667B0D292849E300BB8813 /* String + Extension.swift */,
+				84667B0F29284B9C00BB8813 /* UIViewController + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84FBF6A72922871500EDA8D1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +124,7 @@
 		84FBF6B22922871500EDA8D1 /* NeSwarm */ = {
 			isa = PBXGroup;
 			children = (
+				84667B0C292849C000BB8813 /* Extensions */,
 				84FBF6CE2922882D00EDA8D1 /* Auth */,
 				84FBF6C92922880A00EDA8D1 /* Root */,
 				84FBF6C82922880200EDA8D1 /* Helpers */,
@@ -206,6 +222,7 @@
 				84FBF6F329228EA700EDA8D1 /* SwitchButtonTableCell.swift */,
 				84FBF6F529228EC200EDA8D1 /* CellIDs.swift */,
 				84FBF6F729228ECD00EDA8D1 /* CellTypes.swift */,
+				84667B0A2928200B00BB8813 /* CellFactory.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -386,10 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84667B1029284B9C00BB8813 /* UIViewController + Extension.swift in Sources */,
 				84FBF6FA29228F1400EDA8D1 /* RootRouter.swift in Sources */,
 				84FBF6F829228ECD00EDA8D1 /* CellTypes.swift in Sources */,
+				84667B0E292849E300BB8813 /* String + Extension.swift in Sources */,
 				84FBF6E329228DF600EDA8D1 /* AuthModuleFactory.swift in Sources */,
 				84FBF6E729228E2200EDA8D1 /* AuthPresenter.swift in Sources */,
+				84667B0B2928200B00BB8813 /* CellFactory.swift in Sources */,
 				84FBF6EC29228E5F00EDA8D1 /* AuthProtocols.swift in Sources */,
 				84FBF6F029228E8D00EDA8D1 /* TextFieldTableCell.swift in Sources */,
 				84FBF70029228F4300EDA8D1 /* RootProtocols.swift in Sources */,
