@@ -16,6 +16,8 @@ final class AuthView: UIViewController {
     
     private var dataSourse: [CellType] = [.labelAuth, .login, .password, .email, .submitButton, .switchButton]
     
+    private var State: AuthFormState = AuthFormState()
+    
     // MARK: - Public Properties
     
     lazy var tableView = UITableView()
@@ -57,6 +59,21 @@ final class AuthView: UIViewController {
         tableView.snp.makeConstraints { (maker) in
             maker.edges.equalToSuperview()
         }
+    }
+
+    // TODO: https://stackoverflow.com/questions/32068689/call-function-in-a-viewcontroller-from-uitableviewcell
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        print("textField")
+//        switch textField.placeholder {
+//        case CellTypeConsts.login:
+//            self.State.setLogin(textField.text)
+//        case CellTypeConsts.password:
+//            self.State.setPassword(textField.text)
+//        case CellTypeConsts.email:
+//            self.State.setEmail(textField.text)
+//        default: break;
+//        }
+//        print(self.State.getState())
     }
 }
 

@@ -20,11 +20,12 @@ class TextFieldCell: UITableViewCell, TableCell {
         field.font = field.font?.withSize(TextFieldConsts.textFieldFontSize)
         return field
     }()
-
-    // MARK: - Initializers
     
+    // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CellIDs.textFieldId)
+        
+        textField.addTarget(self, action: #selector(AuthView.textFieldDidChange(_:)), for: .editingDidEnd)
         
         self.setLayout()
     }
@@ -53,7 +54,7 @@ class TextFieldCell: UITableViewCell, TableCell {
 extension TextFieldCell: TableCellProtocol {
     func configure(type: CellType) {
         textField.placeholder = type.name
-        
+                
         switch type {
         case .login:
             textField.textContentType = .username

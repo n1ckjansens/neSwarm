@@ -36,6 +36,7 @@
 		84FBF70029228F4300EDA8D1 /* RootProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF6FF29228F4300EDA8D1 /* RootProtocols.swift */; };
 		84FBF70329228F8200EDA8D1 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBF70229228F8200EDA8D1 /* HexColor.swift */; };
 		A58894DB6F956EAF3EB7FE66 /* Pods_NeSwarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287DFDAEDF92A5E45472A204 /* Pods_NeSwarm.framework */; };
+		CD468DA3292A418100F3E14C /* AuthFormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD468DA2292A418100F3E14C /* AuthFormState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		84FBF6FD29228F3700EDA8D1 /* RootModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModuleFactory.swift; sourceTree = "<group>"; };
 		84FBF6FF29228F4300EDA8D1 /* RootProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootProtocols.swift; sourceTree = "<group>"; };
 		84FBF70229228F8200EDA8D1 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		CD468DA2292A418100F3E14C /* AuthFormState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFormState.swift; sourceTree = "<group>"; };
 		F6CD4E48953033891D2D93E0 /* Pods-NeSwarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeSwarm.release.xcconfig"; path = "Target Support Files/Pods-NeSwarm/Pods-NeSwarm.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		84FBF6C82922880200EDA8D1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CD468DA1292A415600F3E14C /* AuthFormState */,
 				84FBF70129228F7900EDA8D1 /* Colors */,
 			);
 			path = Helpers;
@@ -285,6 +288,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD468DA1292A415600F3E14C /* AuthFormState */ = {
+			isa = PBXGroup;
+			children = (
+				CD468DA2292A418100F3E14C /* AuthFormState.swift */,
+			);
+			path = AuthFormState;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +416,7 @@
 			files = (
 				84667B1029284B9C00BB8813 /* UIViewController + Extension.swift in Sources */,
 				84FBF6FA29228F1400EDA8D1 /* RootRouter.swift in Sources */,
+				CD468DA3292A418100F3E14C /* AuthFormState.swift in Sources */,
 				84FBF6F829228ECD00EDA8D1 /* CellTypes.swift in Sources */,
 				84667B0E292849E300BB8813 /* String + Extension.swift in Sources */,
 				84FBF6E329228DF600EDA8D1 /* AuthModuleFactory.swift in Sources */,
@@ -492,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -546,7 +558,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -570,6 +582,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +610,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

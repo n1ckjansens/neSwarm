@@ -20,10 +20,14 @@ final class SubmitButtonCell: UITableViewCell, TableCell {
     }()
     
     // MARK: - Initializers
+    @objc func btnAction() {
+        self.onClick(sender:self.submitButton)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: CellIDs.submitButtonId)
         self.setLayout()
+        submitButton.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -36,6 +40,7 @@ final class SubmitButtonCell: UITableViewCell, TableCell {
     
     // MARK: - Public Methods
     
+
     func setLayout() {
         contentView.addSubview(submitButton)
         selectionStyle = .none
@@ -54,6 +59,10 @@ extension SubmitButtonCell: TableCellProtocol {
             submitButton.setImage(SubmitButtonConsts.submitImage, for: .normal)
         default: break;
         }
+    }
+
+    func onClick(sender: UIButton!) {
+        print("Button is Clicked")
     }
 }
 
